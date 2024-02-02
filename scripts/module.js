@@ -30,7 +30,7 @@ function generate(app, html, data) {
 }
 
 async function showMonsterForm(event) {
-    const hbs = await fetch('modules/forging-my-foes/templates/create-foe.hbs').then(response => response.text());
+    const hbs = await fetch('modules/forgemyfoes/templates/create-foe.hbs').then(response => response.text());
     const template = Handlebars.compile(hbs);
     const options = { stats: FOES_STATS, type: FOES_TYPE }
     const html = template({ options })
