@@ -90,7 +90,7 @@ async function createActor(context) {
     }
 
     const name = `${type.name} - ${crInfos.CR}`
-    const token = `modules/forgemyfoes/assets/${type.name.toLowerCase()}.png`
+    const token = `modules/forgemyfoes/tokens/${type.name.toLowerCase()}.png`
 
     let actor = await Actor.create({
         name: name,
