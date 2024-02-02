@@ -1,7 +1,7 @@
 {
   "id": "forgemyfoes",
   "title": "Forge my Foes",
-  "description": "",
+  "description": "Forge your foes",
   "version": "#{VERSION}#",
   "library": "false",
   "manifestPlusVersion": "1.2.0",
