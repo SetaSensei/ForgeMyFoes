@@ -59,7 +59,7 @@ async function createActor(context) {
 
     let itemData = {
         name: "Attack",
-        img: "icons/svg/item-bag.svg",
+        img: "icons/skills/melee/strike-slashes-red.webp",
         type: "weapon",
         system: {
             activation: {
@@ -80,7 +80,7 @@ async function createActor(context) {
 
     let attacks = {
         name: `${crInfos.NoA} attack(s)`,
-        img: "icons/svg/item-bag.svg",
+        img: "icons/skills/melee/maneuver-greatsword-yellow.webp",
         type: "feat",
         system: {
             description: {
@@ -89,11 +89,13 @@ async function createActor(context) {
         }
     }
 
+    const name = `${type.name} - ${crInfos.CR}`
+    const token = `modules/forgemyfoes/assets/${type.name.toLowerCase()}.png`
 
     let actor = await Actor.create({
-        name: `${type.name} - ${crInfos.CR}`,
+        name: name,
         type: "npc",
-        img: "icons/svg/mystery-man.svg",
+        img: token,
         system: {
             attributes: {
                 ac: { flat: crInfos.ACDC, calc: "flat" },
@@ -102,6 +104,12 @@ async function createActor(context) {
             details: {
                 type: type.name,
                 cr: eval(crInfos.CR)
+            }
+        },
+        prototypeToken : {
+            name: name,
+            texture: {
+                src: token
             }
         }
     });
