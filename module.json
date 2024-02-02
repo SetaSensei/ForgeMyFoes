@@ -1,6 +1,6 @@
 {
-  "id": "module",
-  "title": "New Module",
+  "id": "forgemyfoes",
+  "title": "Forge my Foes",
   "description": "",
   "version": "#{VERSION}#",
   "library": "false",
